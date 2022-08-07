@@ -1,0 +1,13 @@
+{
+  "name": "Chuckit!",
+  "id": "1137947538047336460",
+  "api": "1.0.0",
+  "main": "code.js",
+  "editorType": [
+    "figma"
+  ],
+  "ui": {
+    "main": "ui.html",
+    "artboard": "artboard.html"
+  }
+}

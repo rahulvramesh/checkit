@@ -1,0 +1,110 @@
+<!-- <h2  style="font-family: 'Inter', sans-serif;">Rectangle Creator</h2>
+<p>Count: <input id="count" value="5"></p>
+<button id="create">Create</button>
+<button id="cancel">Cancel</button> -->
+<script src="https://unpkg.com/alpinejs" defer></script>
+<style>
+  @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+  body {
+    margin: 0px;
+  }
+  .content-dev {
+    padding: 32px;
+  }
+
+  .header {
+    font-family: "Inter", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 21px;
+    line-height: 29px;
+    display: flex;
+    align-items: center;
+    letter-spacing: -1px;
+    text-transform: capitalize;
+
+    color: #000000;
+  }
+  .hero {
+    padding: 0px;
+    margin: 0px;
+    height: 423.17px;
+    margin-top: -2px;
+  }
+  .post-content {
+    font-family: "Inter", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    display: flex;
+    align-items: center;
+
+    color: #000000;
+    margin-top: 18px;
+  }
+
+  .primary-button {
+    background: #000000;
+    border-radius: 5px;
+    font-family: "Inter", sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 47.81px;
+    /* identical to box height */
+    margin-top: 35px;
+    cursor: pointer;
+
+    color: #fff;
+    text-align: center;
+    width: 323.02px;
+    height: 47.81px;
+  }
+</style>
+
+<section id="onboarding">
+  <div class="hero">
+    <img
+      src="https://xvnvyntlneifzyrjuijv.supabase.co/storage/v1/object/public/davinci/new.png"
+    />
+  </div>
+</section>
+<section>
+  <div class="content-dev">
+    <div class="header">Match your team Expectation with a single Click</div>
+    <div class="post-content">
+      Lorem ipsum dolor sit amet<br />
+      adipiscing elit.
+    </div>
+   <div id="artboard" class="primary-button">Get Started</div>
+  </div>
+</section>
+
+<script>
+
+  document.getElementById('artboard').onclick = () => {
+    parent.postMessage({ pluginMessage: { type: 'create-rectangles' } }, '*')
+  }
+
+</script>
+
+
+
+<!-- <h2>Rectangle Creator</h2>
+<p>Count: <input id="count" value="5"></p>
+<button id="create">Create</button>
+<button id="cancel">Cancel</button>
+<script>
+
+document.getElementById('create').onclick = () => {
+  const textbox = document.getElementById('count');
+  const count = parseInt(textbox.value, 10);
+  parent.postMessage({ pluginMessage: { type: 'create-rectangles', count } }, '*')
+}
+
+document.getElementById('cancel').onclick = () => {
+  parent.postMessage({ pluginMessage: { type: 'cancel' } }, '*')
+}
+
+</script> -->
