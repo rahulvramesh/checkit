@@ -8,6 +8,11 @@
   ],
   "ui": {
     "main": "ui.html",
-    "artboard": "artboard.html"
+    "artboard": "artboard.html",
+    "analysize": "analysize.html",
+    "analysizeb": "analysizeb.html",
+    "result": "result.html",
+    "resultb": "resultb.html",
+    "moodboard": "moodboard.html"
   }
 }

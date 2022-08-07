@@ -1,0 +1,124 @@
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+  @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+  body {
+    margin: 0px;
+    font-family: "Inter", sans-serif;
+  }
+
+  .project {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    /* identical to box height */
+
+    color: #8c8c8c;
+  }
+  .primary-button {
+    background: #000000;
+    border-radius: 5px;
+    font-family: "Inter", sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 47.81px;
+    /* identical to box height */
+    margin-top: 35px;
+    cursor: pointer;
+
+    color: #fff;
+    text-align: center;
+    width: 323.02px;
+    height: 47.81px;
+
+    z-index: 2;
+
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .tran{
+    height: 20px;
+    width: 20px;
+    background-color: white;
+  }
+</style>
+
+<div class="box">
+  <div class="flex flex-row h-24">
+    <div class="basis-1/4 flex h-24 justify-center content-center cursor-pointer">
+      <img
+        src="https://xvnvyntlneifzyrjuijv.supabase.co/storage/v1/object/public/davinci/back.svg"
+        width="25px"
+      />
+    </div>
+    <div class="basis-full">
+      <div class="flex flex-col justify-center h-24" style="text-align: center;">
+        <div class="font-bold">Your Approval Rate</div>
+        <div class="project">#Onboarding - 03</div>
+      </div>
+    </div>
+  </div>
+  <!-- <div class="header-container">
+    <div>Back</div>
+   
+  </div> -->
+</div>
+
+<div class="status">
+  <img src="https://xvnvyntlneifzyrjuijv.supabase.co/storage/v1/object/public/davinci/user-a.svg" style="margin-left: auto;margin-right: auto;"/>
+</div>
+
+<section style="padding:15px;" >
+  <ul class="flex flex-wrap text-sm font-medium text-center text-gray-500 dark:text-gray-400 border rounded border-gray-900 p-1 ">
+    <li class="mr-2 ml-2">
+        <a href="#"  id="tab1btn" class="inline-block py-3 text-white bg-gray-900 rounded-lg active" aria-current="page" style="width:154px;">UI Issues</a>
+    </li>
+    <li class="mr-2" >
+        <a href="#"  id="tab2btn" class="inline-block py-3 rounded-lg " style="width:154px;">Worst Case</a>
+    </li>
+</ul>
+</section>
+<section style="height: 295px; overflow: scroll;" id="tab1content">
+  <img src="https://xvnvyntlneifzyrjuijv.supabase.co/storage/v1/object/public/davinci/Artboard A1 __ UI error.svg" style="margin-left: auto;margin-right:auto;"/>
+ 
+</section>
+<section style="height: 295px; overflow: scroll;display:none;" id="tab2content">
+  <img src="https://xvnvyntlneifzyrjuijv.supabase.co/storage/v1/object/public/davinci/Artboard A2 __ Worst case.svg" style="margin-left: auto;margin-right:auto;"/>
+ 
+</section>
+<!-- <div class="tran"></div> -->
+<div id="recheck" class="primary-button">Re - Check</div>
+
+
+<script>
+
+  document.getElementById('tab1btn').onclick = () => {
+    document.getElementById('tab1content').style.display = 'block';
+    document.getElementById('tab2content').style.display = 'none';
+
+    document.getElementById('tab1btn').classList.add('active');
+    document.getElementById('tab1btn').classList.add('text-white');
+    document.getElementById('tab1btn').classList.add('bg-gray-900');
+
+    document.getElementById('tab2btn').classList.remove('active');
+    document.getElementById('tab2btn').classList.remove('text-white');
+    document.getElementById('tab2btn').classList.remove('bg-gray-900');
+    //text-white bg-gray-900
+  }
+
+  document.getElementById('tab2btn').onclick = () => {
+    document.getElementById('tab1content').style.display = 'none';
+    document.getElementById('tab2content').style.display = 'block';
+
+    document.getElementById('tab1btn').classList.remove('active');
+    document.getElementById('tab1btn').classList.remove('text-white');
+    document.getElementById('tab1btn').classList.remove('bg-gray-900');
+
+    document.getElementById('tab2btn').classList.add('active');
+    document.getElementById('tab2btn').classList.add('text-white');
+    document.getElementById('tab2btn').classList.add('bg-gray-900');
+    document.getElementById('tab2btn').classList.add('rounded-lg');
+  }
+</script>

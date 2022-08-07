@@ -1,0 +1,43 @@
+<style>
+    @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+  body {
+    margin: 0px;
+  }
+  .box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 200px;
+  }
+
+  .labeltext {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    /* identical to box height */
+    width: 384px;
+    align-items: center;
+    
+    color: #ACACAC;
+    position: absolute;
+    bottom: 34px;
+    text-align: center;
+  }
+</style>
+
+<div class="box">
+
+        <div><img src="https://xvnvyntlneifzyrjuijv.supabase.co/storage/v1/object/public/davinci/Analyse.gif" width="226px"/></div>
+       
+</div>
+<div class="labeltext">Analysing your UI...</div>   
+
+<script>
+    setInterval(myTimer, 3000);
+    function myTimer() {
+        parent.postMessage({ pluginMessage: { type: 'resultb' } }, '*')
+      } 
+</script>
